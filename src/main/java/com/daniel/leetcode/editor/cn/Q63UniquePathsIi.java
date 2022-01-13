@@ -46,13 +46,112 @@
   public class Q63UniquePathsIi{
       public static void main(String[] args) {
            Solution solution = new Q63UniquePathsIi().new Solution();
+          int[][] ob ={{0,0},{0,1}};;
+          solution.uniquePathsWithObstacles(ob);
       }
       //leetcode submit region begin(Prohibit modification and deletion)
-class Solution {
-    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
-        return 0;
-    }
-}
+//class Solution {
+//    public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+//        int m = obstacleGrid.length;
+//        int n = obstacleGrid[0].length;
+//        int[][] dp = new int[m][n];
+//        if (obstacleGrid[0][0] == 1) {
+//            return 0;
+//        } else {
+//            dp[0][0] = 1;
+//        }
+//        for (int j = 1; j <n; j++) {
+//            if (obstacleGrid[0][j] == 1) {
+//                dp[0][j]=0;
+//                break;
+//            } else {
+//                dp[0][j]=1;
+//            }
+//        }
+//        for (int j = 1; j <m; j++) {
+//            if (obstacleGrid[j][0] == 1) {
+//                dp[j][0]=0;
+//                break;
+//            } else {
+//                dp[j][0]=1;
+//            }
+//        }
+//        if (m == 1 || n == 1) {
+//            return dp[m - 1][n - 1];
+//        }
+//        for (int i = 1; i < m; i++) {
+//            for (int j =1; j <n; j++) {
+//                if (obstacleGrid[i][j] == 1) {
+//                    dp[i][j] = 0;
+//                } else {
+//                    dp[i][j] = dp[i - 1][j] + dp[i][j - 1];
+//                }
+//            }
+//        }
+//        return dp[m-1][n-1];
+//    }
+//}
+        //压缩为一维数组
+      class Solution {
+          public int uniquePathsWithObstacles(int[][] obstacleGrid) {
+              int m = obstacleGrid.length;
+              int n = obstacleGrid[0].length;
+              int[] f = new int[n];
+              f[0]=obstacleGrid[0][0]==1?0:1;
+              for (int i = 0; i < m; i++) {
+                  for (int j = 0; j < n; j++) {
+                      if (obstacleGrid[i][j] == 1) {
+                          f[j] = 0;
+                          continue;
+                      }
+                      if (j - 1 >= 0 && obstacleGrid[i][j - 1] == 0) {
+                          f[j] += f[j - 1];
+                      }
+                  }
+
+              }
+              return f[n - 1];
+
+          }
+
+      }
 //leetcode submit region end(Prohibit modification and deletion)
 
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -201,6 +201,17 @@
             </LeetcodeEditor>
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/Q53MaximumSubarray.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/doc/content/Q53MaximumSubarray.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com53" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/Q53MaximumSubarray.java" />
+              <option name="titleSlug" value="maximum-subarray" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/Q55JumpGame.java">
           <value>
             <LeetcodeEditor>
@@ -245,7 +256,21 @@
           <value>
             <LeetcodeEditor>
               <option name="contentPath" value="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/doc/content/Q63UniquePathsIi.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com63" />
+              <option name="host" value="leetcode-cn.com" />
               <option name="path" value="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/Q63UniquePathsIi.java" />
+              <option name="titleSlug" value="unique-paths-ii" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/Q64MinimumPathSum.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="contentPath" value="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/doc/content/Q64MinimumPathSum.md" />
+              <option name="frontendQuestionId" value="leetcode-cn.com64" />
+              <option name="host" value="leetcode-cn.com" />
+              <option name="path" value="$PROJECT_DIR$/src/main/java/com/daniel/leetcode/editor/cn/Q64MinimumPathSum.java" />
+              <option name="titleSlug" value="minimum-path-sum" />
             </LeetcodeEditor>
           </value>
         </entry>
