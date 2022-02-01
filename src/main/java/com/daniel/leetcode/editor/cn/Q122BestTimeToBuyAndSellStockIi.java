@@ -51,12 +51,16 @@ public class Q122BestTimeToBuyAndSellStockIi {
 
 	//leetcode submit region begin(Prohibit modification and deletion)
 	class Solution {
-		private int temp = 0;
 		public int maxProfit(int[] prices) {
-			for (int i = 1; i < prices.length; i++) {
-				temp += Math.max(0, prices[i] - prices[i - 1]);
+			int length = prices.length;
+			int[][] dp = new int[length][2];
+			dp[0][0] = 0;
+			dp[0][1] = -prices[0];
+			for (int i = 1; i < length; i++) {
+				dp[i][0] = Math.max(dp[i - 1][0], dp[i - 1][1] + prices[i]);
+				dp[i][1] = Math.max(dp[i - 1][1], dp[i - 1][0] - prices[i]);
 			}
-			return temp;
+			return dp[length - 1][0];
 		}
 
 
